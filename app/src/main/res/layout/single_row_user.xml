@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="15dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/profilePhoto"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/user_icon"
+        />
+
+    <TextView
+        android:layout_marginStart="5sp"
+        android:text="cjcidmcod"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/username"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profilePhoto"
+        android:layout_marginLeft="5sp" />
+
+    <TextView
+        android:id="@+id/abilitaAdminButton"
+        app:layout_constraintWidth_percent="0.3"
+        android:padding="5sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@android:color/holo_green_dark"
+        android:text="Abilita admin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

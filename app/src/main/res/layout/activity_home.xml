@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="15dp">
+
+
+
+    <TextView
+        android:id="@+id/activityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_lay_username_clickable"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityTitle"
+        app:layout_constraintBottom_toTopOf="@id/iTuoiDati"
+        android:layout_marginVertical="20sp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePhoto"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:elevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_marginHorizontal="15sp"
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profilePhoto"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/iTuoiDati"
+        app:layout_constraintTop_toBottomOf="@id/cons_lay_username_clickable"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I tuoi dati:"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipAdmin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iTuoiDati"
+        app:layout_constraintBottom_toBottomOf="@id/iTuoiDati"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin ⚙️"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginVertical="10dp"
+        android:id="@+id/consLayUsername"
+        app:layout_constraintTop_toBottomOf="@id/iTuoiDati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:text="Username:"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.55"
+            android:id="@+id/textViewUsername"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginVertical="10dp"
+        android:id="@+id/consLayPassword"
+        app:layout_constraintTop_toBottomOf="@id/consLayUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Password:"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/textViewPassword"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.55"
+            android:layout_height="match_parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginVertical="10dp"
+        android:id="@+id/consLayCitta"
+        app:layout_constraintTop_toBottomOf="@id/consLayPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Città:"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintWidth_percent="0.55"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/textViewCitta"
+            android:layout_height="match_parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginVertical="10dp"
+        android:id="@+id/consLayDataNascita"
+        app:layout_constraintTop_toBottomOf="@id/consLayCitta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Data di nascita:"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintWidth_percent="0.55"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/textViewDataNascita"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/usersManagmentButton"
+        app:layout_constraintBottom_toTopOf="@id/logoutButton"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="gestisci utenti"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        app:layout_constraintBottom_toTopOf="@id/changePasswordButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="logout"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/changePasswordButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:textColor="@color/black"
+        android:text="Modifica password"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
